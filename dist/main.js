@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const menu_admin_1 = require("./menu/menu-admin");
+const Product_1 = require("./modal/Product");
+const ProductManagement_1 = require("./management/ProductManagement");
+let pro1 = new Product_1.Product('rau muống', 'rau củ', 10000, 100, '20/6', 'dùng để ăn');
+let pro2 = new Product_1.Product('rau cải', 'rau củ', 15000, 111, '20/6', 'dùng để ăn');
+let pro3 = new Product_1.Product('cà chua', 'rau củ', 20000, 200, '20/6', 'dùng để ăn');
+let productManager = new ProductManagement_1.ProductManagement();
+productManager.add(pro1);
+productManager.add(pro2);
+productManager.add(pro3);
+let menuAdmin = new menu_admin_1.MenuAdmin();
+menuAdmin.run();
